@@ -4,10 +4,6 @@ import { useStore } from "../../hooks/useStore";
 import { useObserver } from "mobx-react-lite";
 
 import Empty from "../Empty/Empty";
-import Formpje from "../Formpje/index";
-import Kaart from "../Kaart/index";
-import style from "./DetailSouvenir.module.css";
-import LandStore from "../../stores/LandStore";
 
 const DetailSouvenir = () => {
   const { id } = useParams();
@@ -47,7 +43,8 @@ const DetailSouvenir = () => {
         console.log(souvenir);
         console.log('yes')
         const user = userStore.resolveUser(souvenir.souvenirs[0].userId)
-        console.log(user);
+        console.log(user);//undefined
+        console.log(souvenir.souvenirs[0].userId);//null
         console.log(souvenir.delen)
         setUser(user);
         // setState(STATE_LOADING_MORE_DETAILS);
@@ -84,6 +81,8 @@ const DetailSouvenir = () => {
         <p>verstuurder:{user.gebruikersnaam}</p>
         <p>voornaam: {user.voornaam}</p>
         <p>souvenir:{souvenir.souvenirs[0].souvenir}</p>
+
+        <p>postcode:{souvenir.souvenirs[0].postcode}</p>
       </>
     );
   });

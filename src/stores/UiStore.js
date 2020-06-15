@@ -11,21 +11,21 @@ class UiStore {
     });
   }
 
-  // login = async (email, password) => {
-  //   return await this.authService.login(email, password);
-  // };
+  login = async (email, password) => {
+    return await this.authService.login(email, password);
+  };
   logout = async () => {
     return await this.authService.logout();
   };
 
-  // register = async (user) => {
-  //   const result = await this.authService.register(user);
-  //   user.id = result.uid;
-  //   //
-  //   const newUser = this.rootStore.userStore.updateUserFromServer(user);
+  register = async (user) => {
+    const result = await this.authService.register(user);
+    user.id = result.uid;
+    //
+    const newUser = this.rootStore.userStore.updateUserFromServer(user);
 
-  //   await this.rootStore.userStore.createUser(newUser.asJson);
-  // };
+    await this.rootStore.userStore.createUser(newUser.asJson);
+  };
 
   registerUser = async (user) => {
     const result = await this.authService.register(user);

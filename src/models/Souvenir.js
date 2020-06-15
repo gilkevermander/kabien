@@ -16,16 +16,14 @@ class Souvenir {
     //naam, stad, postcode, nr, straat, souvenir
     this.store = store;
     this.lands = []; //in commentaar
-    this.users = []//x
+    this.users = [];//x
     //this.updateFromJson(landId, userId, naam, stad, postcode, nr, straat, souvenir);
     this.updateFromJson(json);
     this.store.addSouvenir(this);
     this.souvenirs = []
   }
 
-  get land() {
-    return this.store.rootStore.landStore.resolveLand(this.landId);
-  }
+  
 
   setLand(land) {
     if (this.land) {
@@ -43,12 +41,15 @@ class Souvenir {
     if (this.user) {
       this.user.unlinkSouvenir(this);
     }
-    //console.log(user);
+    console.log(user);
     if (user) {
       this.userId = user.id;
+      console.log(user);
+      console.log(this.userId);
       this.user.linkSouvenir(this);
+
     } else {
-      //console.log('loser');
+      console.log('loser');
       this.userId = null;
     }
   }
@@ -70,8 +71,8 @@ class Souvenir {
     this.userId = this.users.id//x
     if (userId !== undefined) {
       this.setUser(this.store.rootStore.userStore.resolveUser(userId));
-      //console.log(this.store.rootStore.userStore.resolveUser(userId));
-      //console.log(userId);
+      console.log(this.store.rootStore.userStore.resolveUser(userId));
+      console.log(userId);//hier wel
     }
   };
 
@@ -91,8 +92,25 @@ class Souvenir {
     land.souvenirs.includes(this) && land.unlinkSouvenir(this);
   }
 
+  linkUser(user) {
+    !this.users.includes(user) && this.users.push(user);
+    !user.souvenirs.includes(user) && user.linkSouvenir(this);
+  }
+
+  unlinkUser(user) {
+    const index = this.users.findIndex(test => test.id === user.id);
+    if (index !== -1) {
+      this.users.splice(index, 1);
+    }
+    user.souvenirs.includes(this) && user.unlinkSouvenir(this);
+  }
+
   get user() {
     return this.store.rootStore.userStore.resolveUser(this.userId);
+  }
+
+  get land() {
+    return this.store.rootStore.landStore.resolveLand(this.landId);
   }
   
   

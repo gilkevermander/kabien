@@ -1,6 +1,5 @@
 import React from "react";
-import Sidebar from "../../containers/Sidebar/Sidebar";
-import Content from "../../containers/Content/Content";
+import HomePage from "../HomePage/HomePage";
 import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { ROUTES } from "../../consts";
 import LoginForm from "./LoginForm";
@@ -20,7 +19,7 @@ const Authentication = () => {
             <Redirect to={ROUTES.home} />
           ) : (
             <div className={style.wrapper}>
-              <AppHeader name="ThatsApp" title="Login" />
+              <AppHeader name="Kabien" title="Login" />
               <LoginForm />
               <NavLink to={ROUTES.register} className={style.textlink}>
                 <span>Do you want to register?</span>
@@ -33,7 +32,7 @@ const Authentication = () => {
             <Redirect to={ROUTES.home} />
           ) : (
             <div className={style.wrapper}>
-              <AppHeader name="ThatsApp" title="Register" />
+              <AppHeader name="Kabien" title="Register" />
               <RegisterForm />
             </div>
           )}
@@ -41,8 +40,10 @@ const Authentication = () => {
         <Route path={ROUTES.home}>
           {uiStore.currentUser ? (
             <>
-              <Sidebar />
-              <Content />
+            <AppHeader name="Kabien" title="Home" />
+            <HomePage/>
+              {/* <Sidebar />
+              <Content /> */}
             </>
           ) : (
             <Redirect to={ROUTES.login} />

@@ -9,9 +9,7 @@ class User {
     this.id = id;
     this.store = store;
     this.souvenirs= []
-
     this.updateFromJson(json);
-
     this.store.addUser(this);
   }
 
@@ -19,7 +17,13 @@ class User {
 
   linkSouvenir(souvenir) {
     !this.souvenirs.includes(souvenir) && this.souvenirs.push(souvenir);
+    // !souvenir.users.includes(souvenir) && souvenir.linkUser(this);
   }
+
+  // linkSouvenir(souvenir) {
+  //   !this.souvenirs.includes(souvenir) && this.souvenirs.push(souvenir);
+  //   !souvenir.users.includes(souvenir) && souvenir.linkUser(this);
+  // }
 
   unlinkSouvenir(souvenir) {
     const index = this.souvenirs.findIndex((test) => test.id === souvenir.id);

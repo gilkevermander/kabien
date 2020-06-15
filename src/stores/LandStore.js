@@ -80,6 +80,7 @@ class LandStore {
   }
 
   resolveLand = (id) => this.lands.find((land) => land.id === id);
+  
   resolveLandId = (title) => this.lands.find((land) => land.title === title);
 
   addLand = (land) => {

@@ -33,6 +33,7 @@ class UserStore {
 
   loadAllUsers = async () => {
     const jsonUsers = await this.usersService.getAll();
+    console.log(jsonUsers);
     jsonUsers.forEach((json) => this.updateUserFromServer(json));
   };
 
@@ -85,10 +86,11 @@ class UserStore {
   //   this.users.find((user) => user.id === userId)
   // };
 
-  resolveUser = (id) => this.users.find((user) => user.id === id);
+  resolveUser = (id) => this.users.find((user) => user.id === id);//mogelijk verkeerd
 
   addUser = (user) => {
     this.users.push(user);
+    console.log(user);
   };
 
   searchUser = (search) =>

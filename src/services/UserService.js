@@ -22,13 +22,16 @@ class UserService {
 
   getAll = async () => {
     const snapshot = await this.db.collection("users").get();
-    return snapshot.docs
-      .map((o) => o.data())
-      .map((u) => {
-        u.id = u.userId; // quick fix to make it compatible with koens db
-        return u;
-      });
+    return snapshot.docs.map((o) => o.data());
+    // return snapshot.docs
+    //   .map((o) => o.data())
+    //   .map((u) => {
+    //     u.id = u.userId; // quick fix to make it compatible with koens db//hierklopt het niet lololololol
+    //     return u;
+    //   });
   };
+
+
 
   getContactsForUser = async (user) => {
     const contacts = await this.db

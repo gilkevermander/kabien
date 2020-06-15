@@ -2,7 +2,7 @@
 @value colorPrimary,darkPrimary,solight, spacer1, spacer2 from tokens;
 
 .container {
-  composes: content from "../../styles/layouts.module.css";
+  /* composes: content from "../../styles/layouts.module.css"; */
   grid-template-columns: 1fr;
 }
 a.textlink,
@@ -22,7 +22,7 @@ a.textlink:hover {
   background-color: solight;
 }
 .form {
-  composes: column from "../../styles/layouts.module.css";
+  /* composes: column from "../../styles/layouts.module.css"; */
   display: grid;
   grid-auto-rows: max-content;
 }

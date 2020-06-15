@@ -54,7 +54,8 @@ class SouvenirStore {
     await this.souvenirService.createSouvenir(souvenir);
   };
 
-  // resolveUser = (id) => this.users.find((user) => user.id === id);
+  //resolveUser = (id) => this.souvenirs.users.find((user) => user.id === id);
+  resolveUser = (id) => this.souvenirs.find((souvenir) => souvenir.userId === id);
   resolveSouvenir = (id) => this.souvenirs.find((souvenir) => souvenir.id === id);
 
   addSouvenir = (souvenir) => {
