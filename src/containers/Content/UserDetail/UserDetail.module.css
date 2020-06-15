@@ -1,0 +1,23 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value spacer1 from tokens;
+
+.container {
+  composes: content from "../../../styles/layouts.module.css";
+}
+
+.section {
+  composes: column from "../../../styles/layouts.module.css";
+}
+
+.subtitle {
+  composes: subtitle from "../../../styles/typo.module.css";
+}
+
+.groupsList {
+  padding: spacer1;
+}
+
+.group {
+  composes: largeText from "../../../styles/typo.module.css";
+  padding: spacer1;
+}

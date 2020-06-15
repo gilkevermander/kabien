@@ -1,0 +1,62 @@
+@value tokens: "../../styles/tokens.module.css";
+@value spacer2, colorPrimary, colorBubbleMe from tokens;
+
+.bubble {
+  max-width: 75%;
+  margin: 0.5rem 0;
+  background: colorPrimary;
+  padding: 1rem 1.3rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  border-radius: 1.5rem;
+  line-height: 1.4;
+}
+
+.left {
+  composes: bubble;
+  align-self: flex-start;
+  margin-left: spacer2;
+}
+
+.right {
+  composes: bubble;
+  align-self: flex-end;
+  background: colorBubbleMe;
+}
+
+.unread {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.user {
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.left::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 1.5rem solid colorPrimary;
+  border-bottom: 1.5rem solid transparent;
+  left: -1.4rem;
+  top: 0;
+}
+
+.right::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 1.5rem solid colorBubbleMe;
+  border-bottom: 1.5rem solid transparent;
+  right: -1.6rem;
+  top: 0;
+}

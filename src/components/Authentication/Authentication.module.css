@@ -1,0 +1,32 @@
+@value tokens: "../../styles/tokens.module.css";
+@value colorPrimary,darkPrimary,solight, spacer1, spacer2 from tokens;
+
+.container {
+  composes: content from "../../styles/layouts.module.css";
+  grid-template-columns: 1fr;
+}
+a.textlink,
+a.textlink:link,
+a.textlink:visited,
+a.textlink:active {
+  text-align: center;
+  color: colorPrimary;
+  margin-bottom: spacer2;
+}
+a.textlink:hover {
+  color: darkPrimary;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: solight;
+}
+.form {
+  composes: column from "../../styles/layouts.module.css";
+  display: grid;
+  grid-auto-rows: max-content;
+}
+.button {
+  composes: button from "../../styles/components.module.css";
+  margin: spacer1 0;
+}

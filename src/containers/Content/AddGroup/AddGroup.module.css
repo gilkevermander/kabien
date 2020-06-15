@@ -1,0 +1,26 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value spacer1 from tokens;
+
+.container {
+  composes: content from "../../../styles/layouts.module.css";
+}
+
+.button {
+  composes: button from "../../../styles/components.module.css";
+  margin: spacer1 0;
+}
+
+.input {
+  composes: input from "../../../styles/components.module.css";
+  margin-left: spacer1;
+}
+
+.label {
+  composes: label from "../../../styles/components.module.css";
+}
+
+.form {
+  composes: column from "../../../styles/layouts.module.css";
+  display: grid;
+  grid-auto-rows: max-content;
+}

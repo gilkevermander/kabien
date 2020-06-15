@@ -1,0 +1,24 @@
+@value tokens: "../../styles/tokens.module.css";
+@value colorPrimary, spacer1, solight from tokens;
+
+.container {
+  composes: container from "../../styles/layouts.module.css";
+}
+
+.header {
+  background-color: colorPrimary;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: spacer1;
+}
+
+.title {
+  composes: title1 from "../../styles/typo.module.css";
+  color: solight;
+}
+
+.unread {
+  composes: largeText from "../../styles/typo.module.css";
+  color: solight;
+}

@@ -1,0 +1,18 @@
+@value tokens: "./tokens.module.css";
+@value fontSizeLarge, fontSizeMedium, background, spacer1 from tokens;
+
+.title1 {
+  font-size: fontSizeLarge;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: fontSizeMedium;
+  background-color: background;
+  padding: spacer1;
+}
+
+.largeText {
+  font-size: fontSizeMedium;
+  font-weight: bold;
+}

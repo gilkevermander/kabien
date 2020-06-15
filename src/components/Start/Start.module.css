@@ -1,0 +1,23 @@
+/* @import '~video-react/styles/scss/video-react'; */
+
+.video-react.video-react-16-9 {
+  padding-top: 0;
+}
+
+.player {
+  width: 81rem
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+
+  color: fuchsia;
+}

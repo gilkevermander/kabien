@@ -1,0 +1,14 @@
+@value tokens: "../../styles/tokens.module.css";
+@value notblack from tokens;
+/* 
+.container {
+  composes: full from "../../styles/layouts.module.css";
+} */
+
+.message {
+  composes: largeText from "../../styles/typo.module.css";
+  align-self: center;
+  justify-self: center;
+  grid-column: 1 / -1;
+  color: notblack;
+}

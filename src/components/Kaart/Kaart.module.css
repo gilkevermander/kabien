@@ -1,0 +1,19 @@
+.land {
+  fill: #CCCCCC;
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:0.5;
+}
+
+.land:hover {
+  fill: fuchsia;
+}
+
+.selected {
+	fill: yellow;
+}
+
+.svg {
+	width: 50%;
+}

@@ -1,0 +1,45 @@
+@value tokens: "../../styles/tokens.module.css";
+@value hover, background, notblack from tokens;
+
+.group {
+  display: flex;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "img title" "img latest";
+
+  padding: 1em;
+
+  width: 100%;
+  border-bottom: 0.1rem solid hover;
+}
+
+.container:hover {
+  background-color: hover;
+}
+
+.active {
+  composes: container;
+  background-color: background;
+}
+
+.title {
+  grid-area: title;
+  font-weight: bold;
+  color: notblack;
+}
+
+.img {
+  grid-area: img;
+  border-radius: 50%;
+}
+
+.latest {
+  grid-area: latest;
+  color: grey;
+  place-items: center;
+  text-decoration: none;
+}
