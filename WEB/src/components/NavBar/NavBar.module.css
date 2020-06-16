@@ -1,0 +1,31 @@
+@value tokens: "../../styles/tokens.module.css";
+@value background, hover, darkPrimary, solight, fontSizeMedium from tokens;
+
+.list {
+  display: flex;
+  align-items: center;
+  background-color: background;
+  height: 100%;
+}
+
+.active {
+  background-color: hover;
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: fontSizeMedium;
+  height: 5rem;
+  width: 5rem;
+
+  color: darkPrimary;
+}
+
+.button:active {
+  background-color: solight;
+}

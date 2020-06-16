@@ -1,0 +1,20 @@
+@value tokens: "../../styles/tokens.module.css";
+@value background, notblack, hover, fontSizeLarge, spacer1 from tokens;
+
+.form {
+  display: flex;
+  background-color: background;
+  padding: 1rem;
+}
+
+.input {
+  composes: input from "../../styles/components.module.css";
+}
+
+.emoji {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: hover;
+  font-size: fontSizeLarge;
+  margin-right: spacer1;
+}

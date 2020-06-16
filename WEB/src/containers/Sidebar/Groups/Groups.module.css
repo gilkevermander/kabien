@@ -1,0 +1,19 @@
+@value tokens: "../../../styles/tokens.module.css";
+@value spacer2 from tokens;
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.titel {
+  composes: subtitle from "../../../styles/typo.module.css";
+}
+
+.add {
+  composes: button from "../../../styles/components.module.css";
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: spacer2;
+}

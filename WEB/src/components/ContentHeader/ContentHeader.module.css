@@ -1,0 +1,15 @@
+@value tokens: "../../styles/tokens.module.css";
+@value background, spacer1, notblack from tokens;
+
+.header {
+  background-color: background;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  composes: title1 from "../../styles/typo.module.css";
+  padding: spacer1;
+  text-transform: capitalize;
+  color: notblack;
+}

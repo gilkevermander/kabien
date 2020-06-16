@@ -1,0 +1,73 @@
+{
+  "name": "thatsapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "cloudinary": "^1.22.0",
+    "file-saver": "^2.0.2",
+    "firebase": "^7.14.2",
+    "firebase-admin": "^8.11.0",
+    "google-map-react": "^1.1.7",
+    "leaflet": "^1.6.0",
+    "mic-recorder-to-mp3": "^2.2.1",
+    "mobx": "^5.15.4",
+    "mobx-react-lite": "^2.0.0-alpha.5",
+    "prop-types": "^15.7.2",
+    "qrcode.react": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.7.0",
+    "react-mic": "^12.4.6",
+    "react-multimedia-capture": "^1.2.4",
+    "react-player": "^2.2.0",
+    "react-qr-code": "^1.0.2",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-video": "^1.5.3",
+    "react-video-recorder": "^3.17.1",
+    "react-webcam": "^5.1.0",
+    "redux": "^4.0.5",
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.1.1",
+    "uuid": "^8.0.0",
+    "video-react": "^0.14.1"
+  },
+  "proxy": "http://localhost:80",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/(models|stores)/**.js",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageReporters": [
+      "text"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.0.0"
+  }
+}
